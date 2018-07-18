@@ -1,0 +1,29 @@
+{
+  "name": "website-example",
+  "version": "1.0.0",
+  "description": "Docker example showcasing an HTML website with Nginx, Bootstrap 4 and Docker.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --port 8080 --hot --inline --host 0.0.0.0 --mode development",
+    "build": "webpack --mode production"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^1.0.0",
+    "eslint": "^5.1.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.2",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
+  }
+}
