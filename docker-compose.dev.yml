@@ -10,4 +10,5 @@ services:
       - 8080:8080
     volumes:
       - ./src:/usr/src/app/src
+      - ./img:/usr/src/app/img
     

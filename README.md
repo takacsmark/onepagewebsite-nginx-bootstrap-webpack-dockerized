@@ -2,6 +2,13 @@
 
 This repository is a learning example and a simple boilerplate for a one page website using Bootstrap 4, webpack-dev-server and Docker.
 
+![Preview gif](https://user-images.githubusercontent.com/3372330/42955392-ea16ff3e-8b7d-11e8-9158-959455231911.gif)
+
+## Info
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
 ## Usage
 
 You can start the project in production mode and development mode.
@@ -37,3 +44,7 @@ Development mode is set up to provide the following key features:
 - hot reloading of `index.html` template changes
 
 Production mode features a multi-stage Docker build to minimize image size.
+
+## Credits
+
+Site theme design greatly inspired by this repo: [https://github.com/BlackrockDigital/startbootstrap-creative](https://github.com/BlackrockDigital/startbootstrap-creative).
