@@ -4,6 +4,11 @@ This repository is a learning example and a simple boilerplate for a one page we
 
 ![Preview gif](https://user-images.githubusercontent.com/3372330/42955392-ea16ff3e-8b7d-11e8-9158-959455231911.gif)
 
+## Info
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
 ## Usage
 
 You can start the project in production mode and development mode.
