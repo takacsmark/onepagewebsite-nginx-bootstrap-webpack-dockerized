@@ -2,6 +2,8 @@
 
 This repository is a learning example and a simple boilerplate for a one page website using Bootstrap 4, webpack-dev-server and Docker.
 
+![Preview gif](https://user-images.githubusercontent.com/3372330/42955392-ea16ff3e-8b7d-11e8-9158-959455231911.gif)
+
 ## Usage
 
 You can start the project in production mode and development mode.
