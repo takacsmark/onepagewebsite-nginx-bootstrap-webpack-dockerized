@@ -37,3 +37,7 @@ Development mode is set up to provide the following key features:
 - hot reloading of `index.html` template changes
 
 Production mode features a multi-stage Docker build to minimize image size.
+
+## Credits
+
+Site theme design greatly inspired by this repo: [https://github.com/BlackrockDigital/startbootstrap-creative](https://github.com/BlackrockDigital/startbootstrap-creative).

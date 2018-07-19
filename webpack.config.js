@@ -23,14 +23,20 @@ module.exports = {
        * css-hot-loader is used to hot reload scss with webpack dev server
        * ExtractTextPlugin is used to extract a separate css file
        */
-        {
-            test: /\.scss$/,
-            use: ['css-hot-loader'].concat(ExtractTextPlugin.extract(
-              {
-                fallback: 'style-loader',
-                use: ['css-loader', 'sass-loader']
-              }))
-          }
+      {
+        test: /\.scss$/,
+        use: ['css-hot-loader'].concat(ExtractTextPlugin.extract(
+          {
+            fallback: 'style-loader',
+            use: ['css-loader', 'sass-loader']
+          }))
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader'
+        ]
+      }
     ]
   },
   /**
