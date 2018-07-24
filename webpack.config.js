@@ -1,6 +1,6 @@
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 /**
  * Webpack starts packing in './src/js/index/js'
@@ -21,15 +21,16 @@ module.exports = {
     rules: [
       /**
        * css-hot-loader is used to hot reload scss with webpack dev server
-       * ExtractTextPlugin is used to extract a separate css file
+       * MiniCssExtractPlugin is used to extract a separate css file
        */
       {
         test: /\.scss$/,
-        use: ['css-hot-loader'].concat(ExtractTextPlugin.extract(
-          {
-            fallback: 'style-loader',
-            use: ['css-loader', 'sass-loader']
-          }))
+        use: [
+          'css-hot-loader',
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader'
+        ]
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
@@ -47,12 +48,14 @@ module.exports = {
     watchContentBase: true
   },
   plugins: [ 
-    new ExtractTextPlugin({filename: 'style.css'}),
     new HtmlWebpackPlugin({
         inject: true,
         hash: true,
         template: './src/index.html',
         filename: 'index.html'
+    }),
+    new MiniCssExtractPlugin({
+      filename: "style.css"
     })
   ]
 };
