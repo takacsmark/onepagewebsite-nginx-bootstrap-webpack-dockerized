@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dev
-    image: takacsmark/web-intro-exmpl:dev-1.0
+    image: takacsmark/onepagewebsite-nginx-bootstrap-webpack:dev-1.0
     ports:
       - 8080:8080
     volumes:
