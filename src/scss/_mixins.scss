@@ -1,12 +1,12 @@
-// Mixins
-@mixin transition-all() {
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    transition: all 0.2s;
-  }
-  @mixin background-cover() {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
+@mixin transition-all {
+  -moz-transition: all .2s;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+@mixin background-cover {
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

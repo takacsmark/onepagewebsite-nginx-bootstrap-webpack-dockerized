@@ -1,74 +1,95 @@
 #mainNav {
-    border-bottom: 1px solid fade-out($gray-900, .9);
-    background-color: $white;
-    @include transition-all;
-    .navbar-brand {
-      font-weight: 700;
-      text-transform: uppercase;
-      color: $primary;
-      &:focus,
-      &:hover {
-        color: darken($primary, .1);
-      }
+  @include transition-all;
+
+  background-color: $white;
+  border-bottom: 1px solid fade-out($gray-900, .9);
+
+  .navbar-brand {
+    color: $primary;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &:focus,
+    &:hover {
+      color: darken($primary, .1);
     }
-    .navbar-nav {
-      > li.nav-item {
-         > a.nav-link,
-        > a.nav-link:focus {
-          font-size: .9rem;
-          font-weight: 700;
-          text-transform: uppercase;
-          color: $gray-900;
-          &:hover {
-            color: $primary;
-          }
-          &.active {
-            color: $primary !important;
-            background-color: transparent;
+  }
+  
+  .navbar-nav {
+    > li {
+      .nav-item {
+        > a {
+          .nav-link,
+          .nav-link:focus {
+            color: $gray-900;
+            font-size: .9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+
             &:hover {
+              color: $primary;
+            }
+
+            &.active {
               background-color: transparent;
+              color: $primary !important;
+
+              &:hover {
+                background-color: transparent;
+              }
             }
           }
         }
       }
     }
-    @media (min-width: 992px) {
-      border-color: transparent;
-      background-color: transparent;
+  }
+   
+  @media (min-width: 992px) {
+    background-color: transparent;
+    border-color: transparent;
+
+    .navbar-brand {
+      color: fade-out($white, .3);
+
+      &:focus,
+      &:hover {
+        color: $white;
+      }
+    }
+    .navbar-nav > li.nav-item > a.nav-link {
+      padding: 0.5rem 1rem;
+    }
+
+    .navbar-nav > li.nav-item > a.nav-link,
+    .navbar-nav > li.nav-item > a.nav-link:focus {
+      color: fade-out($white, .3);
+
+      &:hover {
+        color: $white;
+      }
+    }
+
+    &.navbar-shrink {
+      background-color: $white;
+      border-bottom: 1px solid fade-out($gray-900, .9);
+
       .navbar-brand {
-        color: fade-out($white, .3);
+        color: $primary;
+
         &:focus,
         &:hover {
-          color: $white;
+          color: darken($primary, .1);
         }
       }
-      .navbar-nav > li.nav-item > a.nav-link {
-        padding: 0.5rem 1rem;
-      }
+
       .navbar-nav > li.nav-item > a.nav-link,
       .navbar-nav > li.nav-item > a.nav-link:focus {
-        color: fade-out($white, .3);
+        color: $gray-900;
+
         &:hover {
-          color: $white;
-        }
-      }
-      &.navbar-shrink {
-        border-bottom: 1px solid fade-out($gray-900, .9);
-        background-color: $white;
-        .navbar-brand {
           color: $primary;
-          &:focus,
-          &:hover {
-            color: darken($primary, .1);
-          }
-        }
-        .navbar-nav > li.nav-item > a.nav-link,
-        .navbar-nav > li.nav-item > a.nav-link:focus {
-          color: $gray-900;
-          &:hover {
-            color: $primary;
-          }
         }
       }
     }
   }
+}

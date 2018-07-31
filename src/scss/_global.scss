@@ -4,20 +4,20 @@
 //   height: 100%;
 // }
 
-
 hr {
-  max-width: 50px;
-  border-width: 3px;
   border-color: $primary;
-}
+  border-width: 3px;
+  max-width: 50px;
 
-hr.light {
-  border-color: $white;
+  .light {
+    border-color: $white;
+  }
 }
 
 a {
-  color: $primary;
   @include transition-all;
+  color: $primary;
+
   &:hover {
     color: darken($primary, .1);
   }
@@ -44,23 +44,26 @@ section {
 }
 
 ::-moz-selection {
-  color: $white;
   background: $gray-900;
+  color: $white;
   text-shadow: none;
 }
 
 ::selection {
-  color: $white;
   background: $gray-900;
+  color: $white;
   text-shadow: none;
 }
 
-img::selection {
-  color: $white;
-  background: transparent;
-}
+img {
 
-img::-moz-selection {
-  color: $white;
-  background: transparent;
+  &::selection {
+    background: transparent;
+    color: $white;
+  }
+
+  &::-moz-selection {
+    background: transparent;
+    color: $white;
+  }
 }
