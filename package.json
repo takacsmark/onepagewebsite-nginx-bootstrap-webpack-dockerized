@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack-dev-server --port 8080 --hot --inline --host 0.0.0.0 --mode development",
     "build": "webpack --mode production",
-    "lint:sass": "sass-lint -v -q --no-exit"
+    "lint:sass": "sass-lint -v -q --no-exit",
+    "lint:html": "html-linter --config .html-linter.json"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,7 @@
     "css-loader": "^1.0.0",
     "eslint": "^5.1.0",
     "file-loader": "^1.1.11",
+    "html-linter": "^1.0.8",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.1",
     "node-sass": "^4.9.2",
