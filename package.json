@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "webpack-dev-server --port 8080 --hot --inline --host 0.0.0.0 --mode development",
     "build": "webpack --mode production",
+    "lint:html": "html-linter --config .html-linter.json",
     "lint:sass": "sass-lint -v -q --no-exit",
-    "lint:html": "html-linter --config .html-linter.json"
+    "lint:js": "eslint src/js/index.js",
+    "lint": "npm run lint:html && npm run lint:sass && npm run lint:js"
   },
   "author": "",
   "license": "ISC",
