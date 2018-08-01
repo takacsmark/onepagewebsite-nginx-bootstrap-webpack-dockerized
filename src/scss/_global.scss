@@ -1,23 +1,22 @@
-// body,
-// html {
-//   width: 100%;
-//   height: 100%;
-// }
-
-
-hr {
-  max-width: 50px;
-  border-width: 3px;
-  border-color: $primary;
+body,
+html {
+  height: 100%;
+  width: 100%;
 }
 
-hr.light {
-  border-color: $white;
+hr {
+  border-color: $primary;
+  border-width: 3px;
+  max-width: 50px;
+
+  .light {
+    border-color: $white;
+  }
 }
 
 a {
   color: $primary;
-  @include transition-all;
+
   &:hover {
     color: darken($primary, .1);
   }
@@ -43,24 +42,15 @@ section {
   margin-top: 0;
 }
 
-::-moz-selection {
-  color: $white;
-  background: $gray-900;
-  text-shadow: none;
-}
-
 ::selection {
-  color: $white;
   background: $gray-900;
+  color: $white;
   text-shadow: none;
 }
 
-img::selection {
-  color: $white;
-  background: transparent;
-}
-
-img::-moz-selection {
-  color: $white;
-  background: transparent;
+img {
+  &::selection {
+    background: transparent;
+    color: $white;
+  }
 }

@@ -1,12 +1,12 @@
 .text-primary {
   color: $primary !important;
 }
-  
+
 .btn {
+  border: 0;
+  border-radius: 300px;
   font-weight: 700;
   text-transform: uppercase;
-  border: none;
-  border-radius: 300px;
 }
 
 .btn-xl {
@@ -16,14 +16,16 @@
 .btn-primary {
   background-color: $primary;
   border-color: $primary;
+
   &:hover,
   &:focus,
   &:active {
-    color: $white;
     background-color: darken($primary, 5%) !important;
+    color: $white;
   }
+
   &:active,
   &:focus {
-    box-shadow: 0 0 0 0.2rem rgba(240, 95, 64,.5) !important;
+    box-shadow: 0 0 0 .2rem $btn-shadow !important;
   }
 }

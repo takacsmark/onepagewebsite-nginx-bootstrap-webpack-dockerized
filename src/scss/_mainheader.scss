@@ -1,19 +1,24 @@
-header.mainheader {
-    padding-top: 10rem;
-    padding-bottom: calc(10rem - 56px);
+header {
+  &.mainheader {
     background-image: url('../../img/header.jpg');
     background-position: center center;
-    @include background-cover;
+    background-size: cover;
+    padding-bottom: calc(10rem - 56px);
+    padding-top: 10rem;
+
     hr {
-      margin-top: 30px;
       margin-bottom: 30px;
+      margin-top: 30px;
     }
+
     h1 {
       font-size: 2rem;
     }
+
     p {
       font-weight: 300;
     }
+
     @media (min-width: 768px) {
       p {
         font-size: 1.85rem;
@@ -22,8 +27,9 @@ header.mainheader {
     @media (min-width: 992px) {
       height: 100vh;
       min-height: 650px;
-      padding-top: 0;
       padding-bottom: 0;
+      padding-top: 0;
+
       h1 {
         font-size: 3rem;
       }
@@ -31,6 +37,7 @@ header.mainheader {
     @media (min-width: 1200px) {
       h1 {
         font-size: 4rem;
+      }
     }
   }
-} 
+}

@@ -1,0 +1,14 @@
+extends: eslint:recommended
+
+parserOptions:
+  sourceType: module
+
+env:
+  browser: true
+  jquery: true
+  amd: true
+  node: true
+
+globals:
+  ScrollReveal: true
+  sr: true
