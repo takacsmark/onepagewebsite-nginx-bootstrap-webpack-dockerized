@@ -1,11 +1,12 @@
 FROM node:9.11.2-alpine as builder
 
 WORKDIR /usr/src/app
-COPY package.json package-lock.json webpack.config.js postcss.config.js src ./
+COPY package.json package-lock.json webpack.config.js postcss.config.js .html-linter.json .sass-lint.yml .eslintrc.yml ./
 COPY src ./src
 COPY img ./img
 
 RUN npm install && \
+    npm run lint && \
     npm run build
 
 FROM nginx:1.15.1-alpine
