@@ -1,8 +1,8 @@
-// body,
-// html {
-//   width: 100%;
-//   height: 100%;
-// }
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
 
 hr {
   border-color: $primary;
@@ -15,7 +15,6 @@ hr {
 }
 
 a {
-  @include transition-all;
   color: $primary;
 
   &:hover {
@@ -43,12 +42,6 @@ section {
   margin-top: 0;
 }
 
-::-moz-selection {
-  background: $gray-900;
-  color: $white;
-  text-shadow: none;
-}
-
 ::selection {
   background: $gray-900;
   color: $white;
@@ -56,13 +49,7 @@ section {
 }
 
 img {
-
   &::selection {
-    background: transparent;
-    color: $white;
-  }
-
-  &::-moz-selection {
     background: transparent;
     color: $white;
   }

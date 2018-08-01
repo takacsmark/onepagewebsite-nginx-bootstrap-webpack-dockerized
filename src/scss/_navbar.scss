@@ -1,6 +1,4 @@
-#mainNav {
-  @include transition-all;
-
+.main-nav {
   background-color: $white;
   border-bottom: 1px solid fade-out($gray-900, .9);
 
@@ -14,36 +12,22 @@
       color: darken($primary, .1);
     }
   }
-  
-  .navbar-nav {
-    > li {
-      .nav-item {
-        > a {
-          .nav-link,
-          .nav-link:focus {
-            color: $gray-900;
-            font-size: .9rem;
-            font-weight: 700;
-            text-transform: uppercase;
 
-            &:hover {
-              color: $primary;
-            }
+  .nav-link {
+    color: $gray-900;
+    font-size: .9rem;
+    font-weight: 700;
+    text-transform: uppercase;
 
-            &.active {
-              background-color: transparent;
-              color: $primary !important;
+    &:hover {
+      color: $primary;
+    }
 
-              &:hover {
-                background-color: transparent;
-              }
-            }
-          }
-        }
-      }
+    &.active {
+      background-color: transparent;
+      color: $primary !important;
     }
   }
-   
   @media (min-width: 992px) {
     background-color: transparent;
     border-color: transparent;
@@ -56,16 +40,15 @@
         color: $white;
       }
     }
-    .navbar-nav > li.nav-item > a.nav-link {
-      padding: 0.5rem 1rem;
-    }
 
-    .navbar-nav > li.nav-item > a.nav-link,
-    .navbar-nav > li.nav-item > a.nav-link:focus {
-      color: fade-out($white, .3);
+    .nav-item {
+      .nav-link {
+        color: fade-out($white, .3);
+        padding: .5rem 1rem;
 
-      &:hover {
-        color: $white;
+        &:hover {
+          color: $white;
+        }
       }
     }
 
@@ -82,12 +65,13 @@
         }
       }
 
-      .navbar-nav > li.nav-item > a.nav-link,
-      .navbar-nav > li.nav-item > a.nav-link:focus {
-        color: $gray-900;
+      .nav-item {
+        .nav-link {
+          color: $gray-900;
 
-        &:hover {
-          color: $primary;
+          &:hover {
+            color: $primary;
+          }
         }
       }
     }

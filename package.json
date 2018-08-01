@@ -2,7 +2,15 @@
   "name": "website-example",
   "version": "1.0.0",
   "description": "Docker example showcasing an HTML website with Nginx, Bootstrap 4, Webpack dev server and Docker.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:takacsmark/onepagewebsite-nginx-bootstrap-webpack-dockerized.git"
+  },
   "main": "index.js",
+  "browserslist": [
+    "> 1%",
+    "ie > 9"
+  ],
   "scripts": {
     "dev": "webpack-dev-server --port 8080 --hot --inline --host 0.0.0.0 --mode development",
     "build": "webpack --mode production",
@@ -11,9 +19,10 @@
     "lint:js": "eslint src/js/index.js",
     "lint": "npm run lint:html && npm run lint:sass && npm run lint:js"
   },
-  "author": "",
+  "author": "Mark Takacs",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^9.0.2",
     "css-hot-loader": "^1.4.0",
     "css-loader": "^1.0.0",
     "eslint": "^5.1.0",
@@ -22,6 +31,7 @@
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.1",
     "node-sass": "^4.9.2",
+    "postcss-loader": "^2.1.6",
     "sass-lint": "^1.12.1",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",

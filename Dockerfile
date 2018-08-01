@@ -1,7 +1,7 @@
 FROM node:9.11.2-alpine as builder
 
 WORKDIR /usr/src/app
-COPY package.json package-lock.json webpack.config.js src ./
+COPY package.json package-lock.json webpack.config.js postcss.config.js src ./
 COPY src ./src
 COPY img ./img
 

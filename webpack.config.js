@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
 /**
  * Webpack starts packing in './src/js/index/js'
  * The main style sheet file, './src/scss/site.scss', is imported in './src/js/index/js' 
@@ -29,6 +28,7 @@ module.exports = {
           'css-hot-loader',
           MiniCssExtractPlugin.loader,
           'css-loader',
+          'postcss-loader',
           'sass-loader'
         ]
       },

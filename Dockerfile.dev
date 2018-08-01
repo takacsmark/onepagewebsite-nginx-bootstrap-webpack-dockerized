@@ -2,7 +2,7 @@ FROM node:9.11.2-alpine
 
 WORKDIR /usr/src/app
 
-COPY package.json package-lock.json webpack.config.js ./
+COPY package.json package-lock.json webpack.config.js postcss.config.js ./
 RUN npm install
 
 EXPOSE 8080
