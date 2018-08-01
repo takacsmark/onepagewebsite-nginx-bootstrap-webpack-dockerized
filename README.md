@@ -6,9 +6,10 @@ This repository is a learning example and a simple boilerplate for a one page we
 
 ## Info
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.org/takacsmark/onepagewebsite-nginx-bootstrap-webpack-dockerized.svg?branch=master)](https://travis-ci.org/takacsmark/onepagewebsite-nginx-bootstrap-webpack-dockerized)
 [![dependencies Status](https://david-dm.org/takacsmark/onepagewebsite-nginx-bootstrap-webpack-dockerized/status.svg)](https://david-dm.org/takacsmark/onepagewebsite-nginx-bootstrap-webpack-dockerized)
 [![devDependencies Status](https://david-dm.org/takacsmark/onepagewebsite-nginx-bootstrap-webpack-dockerized/dev-status.svg)](https://david-dm.org/takacsmark/onepagewebsite-nginx-bootstrap-webpack-dockerized?type=dev)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Usage
 
