@@ -47,6 +47,25 @@ Development mode is set up to provide the following key features:
 
 Production mode features a multi-stage Docker build to minimize image size.
 
+## Infrastructure as code
+
+### Terraform
+
+The repo contains a working example to create an AWS EC2 t2.micro instance automatically with Terraform.
+
+First create a file called `terraform.tfwars` under the `infra` directory. I have provided an example, so you can just rename `terraform.example.tfvars` and fill in your AWS secret credentials in the file.
+
+Update `docker-compose.infra.yml` and update the keypair path information on your machine.
+
+Then run the following commands:
+
+```shell
+$ docker-compose -f docker-compose.infra.yml run --rm terraform init
+$ docker-compose -f docker-compose.infra.yml run --rm terraform plan
+$ docker-compose -f docker-compose.infra.yml run --rm terraform apply -auto-approve
+
+```
+
 ## Credits
 
 Site theme design greatly inspired by this repo: [https://github.com/BlackrockDigital/startbootstrap-creative](https://github.com/BlackrockDigital/startbootstrap-creative).

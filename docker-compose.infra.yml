@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  terraform:
+    image: hashicorp/terraform:0.11.7
+    working_dir: /infra
+    volumes:
+      - ./infra:/infra
+      - ./docker-compose.yml:/assets/docker-compose.yml:ro
+      - /Users/takacsmark/.ssh/id_rsa:/assets/id_rsa:ro
+      - /Users/takacsmark/.ssh/id_rsa.pub:/assets/id_rsa.pub:ro
