@@ -14,18 +14,21 @@
   }
 
   .nav-link {
-    color: $gray-900;
-    font-size: .9rem;
-    font-weight: 700;
-    text-transform: uppercase;
+    &,
+    &:focus {
+      color: $gray-900;
+      font-size: .9rem;
+      font-weight: 700;
+      text-transform: uppercase;
 
-    &:hover {
-      color: $primary;
-    }
+      &:hover {
+        color: $primary;
+      }
 
-    &.active {
-      background-color: transparent;
-      color: $primary !important;
+      &.active {
+        background-color: transparent;
+        color: $primary !important;
+      }
     }
   }
   @media (min-width: 992px) {
@@ -43,11 +46,14 @@
 
     .nav-item {
       .nav-link {
-        color: fade-out($white, .3);
-        padding: .5rem 1rem;
+        &,
+        &:focus {
+          color: fade-out($white, .3);
+          padding: .5rem 1rem;
 
-        &:hover {
-          color: $white;
+          &:hover {
+            color: $white;
+          }
         }
       }
     }
@@ -67,10 +73,13 @@
 
       .nav-item {
         .nav-link {
-          color: $gray-900;
+          &,
+          &:focus {
+            color: $gray-900;
 
-          &:hover {
-            color: $primary;
+            &:hover {
+              color: $primary;
+            }
           }
         }
       }
